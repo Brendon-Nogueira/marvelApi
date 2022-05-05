@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { ComicsComponent } from './comics/comics.component';
 import { EventsComponent } from './events/events.component';
 import { SeriesComponent } from './series/series.component';
 import { StoriesComponent } from './stories/stories.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { StoriesComponent } from './stories/stories.component';
     ComicsComponent,
     EventsComponent,
     SeriesComponent,
-    StoriesComponent
+    StoriesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    Router
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
