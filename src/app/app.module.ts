@@ -11,6 +11,7 @@ import { EventsComponent } from './events/events.component';
 import { SeriesComponent } from './series/series.component';
 import { StoriesComponent } from './stories/stories.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CharacterComponent } from './characters/character/character.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     EventsComponent,
     SeriesComponent,
     StoriesComponent,
-    NavbarComponent
+    NavbarComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

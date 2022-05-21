@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { MarvelcontentsService } from './character/shared/marvelcontents.service';
 
 @Component({
   selector: 'characters',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private charactersSvc : MarvelcontentsService) { }
+
+  allCharacters : Observable<any> | undefined
 
   ngOnInit(): void {
+    this.getCharacters()
   }
 
+  getCharacters(){
+    this.allCharacters = this.charactersSvc.getAllCharacters()
+  }
 }
