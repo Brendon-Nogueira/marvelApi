@@ -11,7 +11,7 @@ export class CharactersComponent implements OnInit {
 
   constructor(private charactersSvc : MarvelcontentsService) { }
 
-  allCharacters : Observable<any> | undefined
+  allCharacters : Observable<any> | any
 
   ngOnInit(): void {
     this.getCharacters()
