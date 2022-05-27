@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +10,7 @@ export class MarvelcontentsService {
  
   constructor(private httpClient : HttpClient) { }
 
- /*  PUBLIC_KEY = 'd6f147a6bd7f9364730845f81f3840b4'
+ /* teste01 PUBLIC_KEY = 'd6f147a6bd7f9364730845f81f3840b4'
   HASH = 'e1214ab105787e7a79059842f2e82da3'
   md5 = '1653260397''*/
 
