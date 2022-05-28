@@ -23,11 +23,22 @@ export class MarvelcontentsService {
  private url_base = `http://gateway.marvel.com/v1/public/`
 
 
-  all_Characters = this.url_base + `characters?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`;
+  all_Characters = this.url_base + `characters?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`
 
 
   getAllCharacters() : Observable<any> {
       return this.httpClient.get<any>(this.all_Characters) 
       .pipe(map((data: any) => data.data.results));
+  
     }
+
+    all_Comics = this.url_base + `comics?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`
+
+    getAllComics() : Observable<any> {
+      return this.httpClient.get<any>(this.all_Comics) 
+      .pipe(map((data: any) => data.data.results));
+  
+    }
+
+    
   }
