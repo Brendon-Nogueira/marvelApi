@@ -1,22 +1,21 @@
 
 <h1>Characters Marvel UCM</h1>
 
-
-
-
-<div class="row row-cols-1 row-cols-md-3 g-4" *ngFor="let character of allCharacters | async" >
-  <div class="col">
-    <div class="card h-100">
-      <img  src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" class="card-img-top" alt="{{character.name}}">
+<div class="row">
+  <div class="card" style="width: 18rem;  " *ngFor="let character of allCharacters |async">
+      <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}} " class="card-img-top" alt="{{character.name}}">
       <div class="card-body">
         <h5 class="card-title">{{character.name}}</h5>
-        <p class="card-text" >{{character.description}}</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <p class="card-text">{{character.description}}</p>
+        <a href="#" class="btn btn-primary"> Description </a>
       </div>
     </div>
-  </div>
+  
+</div>
+
+
+
+
 
 
 
