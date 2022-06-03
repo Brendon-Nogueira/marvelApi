@@ -1,1 +1,16 @@
-<p>comics works!</p>
+
+<h3>Marvel Comics</h3>
+
+<div class="row">
+    <div class="card" style="width: 18rem;  " *ngFor="let comics of allComics">
+        <img src="{{comics.thumbnail.path}}.{{comics.thumbnail.extension}} " class="card-img-top" alt="{{comics.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{comics.name}}</h5>
+          <p class="card-text">{{comics.description}}</p>
+          <a href="#" class="btn btn-primary"> Description </a>
+        </div>
+      </div>
+    
+</div>
+
+

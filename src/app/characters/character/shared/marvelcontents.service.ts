@@ -35,7 +35,7 @@ export class MarvelcontentsService {
     all_Comics = this.url_base + `comics?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`
 
     getAllComics() : Observable<any> {
-      return this.httpClient.get<any>(this.all_Comics) 
+      return this.httpClient.get<any> (this.all_Comics) 
       .pipe(map((data: any) => data.data.results));
   
     }

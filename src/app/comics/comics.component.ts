@@ -9,7 +9,7 @@ import { MarvelcontentsService } from '../characters/character/shared/marvelcont
 })
 export class ComicsComponent implements OnInit {
 
-  all_Comics : Observable<any> | any
+  allComics : any [] = []
   constructor( private comicsSvc : MarvelcontentsService) { }
 
   ngOnInit(): void {
@@ -17,6 +17,8 @@ export class ComicsComponent implements OnInit {
   }
 
   getComics(){
-    this.all_Comics = this.comicsSvc.getAllComics
+    this.comicsSvc.getAllComics().subscribe(comics =>{
+      this.allComics = comics
+    })
   }
 }
