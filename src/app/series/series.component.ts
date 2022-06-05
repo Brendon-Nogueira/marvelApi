@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarvelcontentsService } from '../characters/character/shared/marvelcontents.service';
 
 @Component({
   selector: 'app-series',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesComponent implements OnInit {
 
-  constructor() { }
+  allSeries : any [] = []
+  constructor(private seriesSvc : MarvelcontentsService) { }
 
+  
   ngOnInit(): void {
+    this.getSeries()
   }
-
+  getSeries(){
+    this.seriesSvc.getAllSeries().subscribe(series =>{
+      this.allSeries = series
+    })
+  }
 }

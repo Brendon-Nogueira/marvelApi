@@ -3,7 +3,6 @@ export interface Characters{
     name: string
     description : string
     thumbanail : Image
-    
 }
 
 export interface Image {

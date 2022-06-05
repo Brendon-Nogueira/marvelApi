@@ -1,1 +1,18 @@
 
+<h3>Marvel Series:</h3>
+
+<div class="row">
+    <div class="card" style="width: 18rem;  " *ngFor="let series of allSeries">
+        <img src="{{series.thumbnail.path}}.{{series.thumbnail.extension}} " class="card-img-top" alt="{{series.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{series.name}}</h5>
+          <p class="card-text">{{series.description}}</p>
+          <a href="#" class="btn btn-primary"> Description </a>
+        </div>
+      </div>
+    
+</div>
+
+
+
+

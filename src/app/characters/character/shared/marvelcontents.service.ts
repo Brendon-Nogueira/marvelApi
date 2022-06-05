@@ -28,7 +28,7 @@ export class MarvelcontentsService {
 
   getAllCharacters() : Observable<any> {
       return this.httpClient.get<any>(this.all_Characters) 
-      .pipe(map((data: any) => data.data.results));
+      .pipe(map((data: any) => data.data.results))
   
     }
 
@@ -36,9 +36,22 @@ export class MarvelcontentsService {
 
     getAllComics() : Observable<any> {
       return this.httpClient.get<any> (this.all_Comics) 
-      .pipe(map((data: any) => data.data.results));
+      .pipe(map((data: any) => data.data.results))
   
     }
 
+    all_Series = this.url_base + `series?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`
+
+    getAllSeries(): Observable<any>{
+      return this.httpClient.get<any> (this.all_Series)
+      .pipe(map((data: any) => data.data.results))
+    }
+
+    all_Stories = this.url_base +  `stories?ts=${this.ts}&limit=100&apikey=${this.public_key}&hash=${this.HASH}`
     
+
+    getAllStories() : Observable <any> {
+      return this.httpClient.get<any> (this.all_Stories)
+      .pipe(map((data: any) => data.data.results))
+    }
   }
